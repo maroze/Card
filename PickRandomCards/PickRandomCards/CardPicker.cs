@@ -7,6 +7,12 @@ namespace PickRandomCards
     public class CardPicker
     {
         static Random random = new Random();
+
+        /// <summary>
+        /// Выбирает несколько карт и возвращает их
+        /// </summary>
+        /// <param name="NumberOfCards">Количество выбираемых карт.</param>
+        /// <returns>Массив строк с названиями карт.</returns>
         public static string[] PickSomeCards(int NumberOfCards)
         {
             string[] pickedCards = new string[NumberOfCards];
@@ -18,6 +24,10 @@ namespace PickRandomCards
             return pickedCards;
         }
 
+        /// <summary>
+        /// Выбирает случайную "рубашку" карты
+        /// </summary>
+        /// <returns>Строку с названием рубашки.</returns>
         public static string RandomSuit()
         {
             int value = random.Next(1, 5);
@@ -37,6 +47,11 @@ namespace PickRandomCards
                     return "Бубны";
             }
         }
+
+        /// <summary>
+        /// Случайному числу присваивается карточная масть
+        /// </summary>
+        /// <returns>Строка с мастью карты.</returns>
        public static string RandomValue()
         {
             int value = random.Next(1, 14);
